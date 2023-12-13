@@ -67,7 +67,7 @@ async def among_us(message: Message):
     else:
         color = randint(1, 12)
     stickerx = await amongus_gen(text, color)
-    reply_id = reply.message_id if reply else None
+    reply_id = reply.id if reply else None
     SENT=False
     try:
         await message.client.send_sticker(
