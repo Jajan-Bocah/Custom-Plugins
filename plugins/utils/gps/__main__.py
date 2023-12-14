@@ -36,7 +36,7 @@ async def gps_locate_(message: Message):
     lat = geoloc.latitude
     await message.delete()
     reply = message.reply_to_message
-    reply_id = reply.message_id if reply else None
+    reply_id = reply.id if reply else None
     buttons = None
     if message.client.is_bot:
         g_maps = f"https://www.google.com/maps/search/?api=1&query={lat},{lon}"
